@@ -22,6 +22,6 @@ public class AddingMachine {
   }
 
   public void clear() {
-	 System.out.println("Cheese");
+	
   }
 }
