@@ -1,3 +1,8 @@
+//Vinh Duy NGUYEN
+//Editted AddingMachine.java. Include main method
+//Main method in seperate file.
+//Github Repo- https://github.com/vinhnguyen200891337/cse360assignment02
+
 package cse360assignment02;
 
 public class AddingMachine {
@@ -8,11 +13,13 @@ public class AddingMachine {
 		public static void main(String[] args)
 		{
 			AddingMachine myCalculator = new AddingMachine();
+			System.out.println(myCalculator.toString());
+			System.out.println(myCalculator.getTotal());
 			myCalculator.add(4);
 			myCalculator.subtract(5);
 			myCalculator.add(15);
 			System.out.println(myCalculator.toString());
-			myCalculator.clear();
+			myCalculator.clear();			
 			System.out.println(myCalculator.getTotal());
 			
 		}
@@ -32,14 +39,18 @@ public class AddingMachine {
 		 total = total + value;
 	  }
 
-  public void subtract (int value) {
-  }
+	  public void subtract (int value) {
+		  sign = " - ";
+		  output = output + sign + Integer.toString(value);
+		  total = total - value;
+	  }
 
-  public String toString () {
-    return "";
-  }
+	  public String toString () {
+	    return "0" + output; //Returning output string
+	  }
 
-  public void clear() {
-	
-  }
+	  public void clear() {
+		output = " "; //Reset the output
+		total = 0; // Reset total value		
+	  }
 }
